@@ -1,4 +1,4 @@
-const API_URL = "http://127.0.0.1:5000/api/jobs";
+const API_URL = "https://automated-job-data-collector.onrender.com/";
 
 let allJobs = [];
 let showFavoritesOnly = false;
