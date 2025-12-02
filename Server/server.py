@@ -12,10 +12,14 @@ CORS(app)
 def get_db_connection():
     return mysql.connector.connect(
         host=os.getenv("DB_HOST"),
+        port=os.getenv("DB_PORT"),
         user=os.getenv("DB_USER"),
         password=os.getenv("DB_PASSWORD"),
-        database=os.getenv("DB_NAME")
+        database=os.getenv("DB_NAME"),
+        ssl_ca=None,   
+        ssl_disabled=False
     )
+
 
 @app.route("/")
 def home():
