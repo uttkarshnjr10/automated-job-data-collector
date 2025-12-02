@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python Job Market Tracker</title>
+
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>🐍 Python Job Market</h1>
+        <p class="sub">Your daily feed of remote Python jobs</p>
+
+        <div class="controls">
+            <input type="text" id="search-input" placeholder="Search roles, companies..." />
+            <button id="fav-btn" onclick="toggleFavorites()">
+                <i class="fa-regular fa-heart"></i> Saved Jobs
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <div id="loading" class="loading">
+            <div class="skeleton-card"></div>
+            <div class="skeleton-card"></div>
+            <div class="skeleton-card"></div>
+        </div>
+
+        <div id="job-grid" class="job-grid"></div>
+        <div id="empty" class="empty hidden">No matching jobs found 🥺</div>
+    </main>
+
+    <footer>
+        Built with ❤️ by Uttkarsh — Powered by Python ETL
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
